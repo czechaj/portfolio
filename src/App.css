@@ -1,6 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -26,23 +26,24 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   height: 5rem;
   width: 100%;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0.5rem 1rem;
 }
 
 nav button {
+  font-size: 1.5rem;
   letter-spacing: 0.1rem;
   color: #f0f5f9;
   cursor: pointer;
@@ -56,8 +57,8 @@ nav ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 1rem;
 }
 
@@ -92,20 +93,9 @@ nav ul li ion-icon {
 }
 
 .container .front {
-  background: -webkit-gradient(linear,
-      left top,
-      left bottom,
-      from(rgba(105, 211, 252, 0.25)),
-      color-stop(86%, rgba(255, 116, 161, 0.25)),
-      to(rgba(1, 0, 0, 0.25)));
-  background: linear-gradient(rgba(105, 211, 252, 0.25) 0%,
-      rgba(255, 116, 161, 0.25) 86%,
-      rgba(1, 0, 0, 0.25) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(105, 211, 252, 0.25)), color-stop(86%, rgba(255, 116, 161, 0.25)), to(rgba(1, 0, 0, 0.25)));
+  background: linear-gradient(rgba(105, 211, 252, 0.25) 0%, rgba(255, 116, 161, 0.25) 86%, rgba(1, 0, 0, 0.25) 100%);
   background-size: cover;
-  -webkit-transform: translateZ(0) scale(1);
-  transform: translateZ(0) scale(1);
-  -webkit-transition: all;
-  transition: all;
 }
 
 .container .front .hi-container {
@@ -113,7 +103,7 @@ nav ul li ion-icon {
   left: 50%;
   top: 80%;
   -webkit-transform: translate(-100%, -50%);
-  transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
 }
 
 .container .front .hi-container .hi {
@@ -121,11 +111,11 @@ nav ul li ion-icon {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -153,18 +143,121 @@ nav ul li ion-icon {
   color: #f0f5f9;
 }
 
-.projects {
+.frontend-projects, .backend-projects {
   display: -ms-grid;
   display: grid;
-  margin-left: 6rem;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100vh;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #000;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(88%, rgba(255, 116, 161, 0.25)), to(rgba(0, 0, 0, 0.45)));
+  background: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(255, 116, 161, 0.25) 88%, rgba(0, 0, 0, 0.45) 100%);
 }
 
-.projects img {
-  width: 75%;
+.frontend-projects img, .backend-projects img {
+  width: 87%;
+  opacity: 76%;
+  -webkit-transition: opacity 0.7s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
 }
 
+.frontend-projects img:hover, .backend-projects img:hover {
+  opacity: 100%;
+}
+
+.frontend-projects h1, .backend-projects h1 {
+  font-size: 3rem;
+  color: #f0f5f9;
+}
+
+.frontend-projects h2, .backend-projects h2 {
+  font-size: 1.5rem;
+}
+
+.frontend-projects .project-used-tech, .backend-projects .project-used-tech {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 87%;
+}
+
+.frontend-projects .project-used-tech .tags, .backend-projects .project-used-tech .tags {
+  overflow: hidden;
+}
+
+.frontend-projects .project-used-tech .tags span, .backend-projects .project-used-tech .tags span {
+  font-size: 10px;
+  white-space: nowrap;
+  padding: 0.4rem 1rem;
+  border-radius: 9px;
+}
+
+.frontend-projects .project-v2-links, .backend-projects .project-v2-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 5rem;
+  margin-top: 1rem;
+  float: right;
+  clear: both;
+  width: 10%;
+  padding: 0.5rem;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+.frontend-projects .project-arrow, .backend-projects .project-arrow {
+  position: absolute;
+  bottom: 0;
+  left: 47%;
+}
+
+.frontend-projects .project-arrow button, .backend-projects .project-arrow button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.frontend-projects .project-arrow button ion-icon, .backend-projects .project-arrow button ion-icon {
+  pointer-events: none;
+  font-size: 5rem;
+  color: #f0f5f9;
+}
+
+.skills {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(88%, rgba(255, 116, 161, 0.25)), to(rgba(0, 0, 0, 0.45)));
+  background: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(255, 116, 161, 0.25) 88%, rgba(0, 0, 0, 0.45) 100%);
+}
+
+.skills h1 {
+  font-size: 3rem;
+}
+
+.skills button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.skills button ion-icon {
+  pointer-events: none;
+  font-size: 5rem;
+  color: #f0f5f9;
+}
 /*# sourceMappingURL=App.css.map */

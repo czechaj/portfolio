@@ -27,7 +27,7 @@ function Hi() {
       <div className="auto-typed">
         <span style={{ whiteSpace: "pre" }} ref={el} />
       </div>
-      <Link to="projects" spy={true} smooth={false}>
+      <Link to="frontendProjects" spy={true} smooth={false}>
         <button>
           <ion-icon name="chevron-down-outline"></ion-icon>
         </button>
