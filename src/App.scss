@@ -1,0 +1,147 @@
+//mixin
+@mixin centerify {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//global variables
+$primary: #222831;
+$secondary: #f0f5f9;
+
+//global styles
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: $secondary;
+  background-color: #000000;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: $secondary;
+}
+
+//component
+nav {
+  @include centerify();
+  position: sticky;
+  top: 0;
+  height: 5rem;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  button{
+    letter-spacing: .1rem;
+    color: $secondary;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    li {
+      padding: 0 0.3rem;
+      ion-icon {
+        margin: 0 0.3rem;
+        color: $secondary;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+.container {
+  position: relative;
+  height: 100vh;
+  .background,
+  .front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .background {
+    background: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170")
+      no-repeat center;
+    min-height: 500px;
+    background-attachment: fixed;
+  }
+  .front {
+    background: linear-gradient(
+      rgba(105, 211, 252, 0.25) 0%,
+      rgba(255, 116, 161, 0.25) 86%,
+      rgba(1, 0, 0, 0.25) 100%
+    );
+    background-size: cover;
+    transform: translateZ(0) scale(1);
+    transition: all;
+    .hi-container {
+      position: absolute;
+      left: 50%;
+      top: 80%;
+      transform: translate(-100%, -50%);
+      .hi {
+        @include centerify();
+        position: relative;
+    
+        .auto-typed {
+          position: absolute;
+          top: 4vh;
+          span,
+          span strong {
+            color: $secondary;
+            font-size: 1.5rem;
+          }
+        }
+        button {
+          margin: 50vh 0;
+          cursor: pointer;
+          border: none;
+          background: transparent;
+          ion-icon {
+            pointer-events: none;
+            font-size: 5rem;
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.projects {
+  display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // grid-column-gap: 3rem;
+  margin-left: 6rem;
+  align-items: center;
+  background: #000;
+  // transform: translateZ(0) scale(1);
+  img {
+    // justify-self: end;
+    width: 75%;
+  }
+}
+
+
+// !HANDLE
+// main {
+//   height: 100vh;
+//   perspective: 300px;
+// }
+

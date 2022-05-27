@@ -1,0 +1,170 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: #f0f5f9;
+  background-color: #000000;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #f0f5f9;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 5rem;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+nav button {
+  letter-spacing: 0.1rem;
+  color: #f0f5f9;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+nav ul li {
+  padding: 0 0.3rem;
+}
+
+nav ul li ion-icon {
+  margin: 0 0.3rem;
+  color: #f0f5f9;
+  font-size: 2rem;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+}
+
+.container .background,
+.container .front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.container .background {
+  background: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170") no-repeat center;
+  min-height: 500px;
+  background-attachment: fixed;
+}
+
+.container .front {
+  background: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      from(rgba(105, 211, 252, 0.25)),
+      color-stop(86%, rgba(255, 116, 161, 0.25)),
+      to(rgba(1, 0, 0, 0.25)));
+  background: linear-gradient(rgba(105, 211, 252, 0.25) 0%,
+      rgba(255, 116, 161, 0.25) 86%,
+      rgba(1, 0, 0, 0.25) 100%);
+  background-size: cover;
+  -webkit-transform: translateZ(0) scale(1);
+  transform: translateZ(0) scale(1);
+  -webkit-transition: all;
+  transition: all;
+}
+
+.container .front .hi-container {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  -webkit-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+}
+
+.container .front .hi-container .hi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.container .front .hi-container .hi .auto-typed {
+  position: absolute;
+  top: 4vh;
+}
+
+.container .front .hi-container .hi .auto-typed span,
+.container .front .hi-container .hi .auto-typed span strong {
+  color: #f0f5f9;
+  font-size: 1.5rem;
+}
+
+.container .front .hi-container .hi button {
+  margin: 50vh 0;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.container .front .hi-container .hi button ion-icon {
+  pointer-events: none;
+  font-size: 5rem;
+  color: #f0f5f9;
+}
+
+.projects {
+  display: -ms-grid;
+  display: grid;
+  margin-left: 6rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #000;
+}
+
+.projects img {
+  width: 75%;
+}
+
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,46 @@
+[
+  {
+    "id": 0,
+    "name": "To-Do-App",
+    "img": [
+      "/static/media/todo-1.a2303bf2f5a7ae94c4e1.png",
+      "/static/media/todo-2.75a9504f9e35dcd47592.png"
+    ]
+  },
+  {
+    "id": 1,
+    "name": "NotesApp",
+    "img": [
+      "/static/media/notes-1.3afcfea9423a28aaa2b6.png",
+      "/static/media/notes-2.3435d1ec06e2b3273c7c.png"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Breaking-Bad Memory Game",
+    "img": ["/static/media/todo-2.75a9504f9e35dcd47592.png"]
+  },
+  {
+    "id": 3,
+    "name": "BMI Calculator App",
+    "img": ["/static/media/bmi.59625084115e8b9c9d3d.png"]
+  },
+  {
+    "id": 4,
+    "name": "Shopilantee eCommerce App",
+    "img": ["/static/media/shop.7ae779d2a91ef4f61c31.png"]
+  },
+  {
+    "id": 5,
+    "name": "Typing Speed App",
+    "img": [
+      "/static/media/notes-2.3435d1ec06e2b3273c7c.png",
+      "../../img/notes-2.png"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Schultz Anderson",
+    "img": ["/static/media/typing.fc37e92aa6b9be02cbaf.png"]
+  }
+]
