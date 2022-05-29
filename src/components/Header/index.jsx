@@ -3,9 +3,21 @@ import React from "react";
 function Header() {
   return (
     <nav>
-      <div>
+      <div className="nav-left">
         <button>
           <h2>czechaj</h2>
+        </button>
+        <button>
+          <a href="#frontendProjects">Front-End-Projects</a>
+        </button>
+        <button>
+          <a href="#backendProjects">Back-End Projects</a>
+        </button>
+        <button>
+          <a href="#skills">Skills</a>
+        </button>
+        <button>
+          <a href="#certificates">Certificates</a>
         </button>
       </div>
       <ul>

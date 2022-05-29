@@ -1,8 +1,9 @@
 import React from "react";
-import Card from "../Card";
+import ProjectCard from "../ProjectCard";
 import Header from "../Header";
 import Hi from "../Hi";
 import SkillCard from "../SkillCard";
+import Certificates from "../Certificates";
 
 import projects from "../../utils/projects";
 import backendProjects from "../../utils/backendProjects";
@@ -10,7 +11,7 @@ import backendProjects from "../../utils/backendProjects";
 function Container() {
   return (
     <main>
-      <div className="container">
+      <div className="container hi">
         <div className="background"></div>
         <div id="front" className="front">
           <Header />
@@ -20,13 +21,16 @@ function Container() {
         </div>
       </div>
       <div id="frontendProjects" className="container frontend-projects">
-        <Card projects={projects} />
+        <ProjectCard projects={projects} />
       </div>
       <div id="backendProjects" className="container backend-projects">
-        <Card projects={backendProjects} />
+        <ProjectCard projects={backendProjects} />
       </div>
       <div id="skills" className="container skills">
         <SkillCard />
+      </div>
+      <div id="certificates" className="container certificates">
+        <Certificates />
       </div>
     </main>
   );

@@ -9,7 +9,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  color: #f0f5f9;
+  color: #cbd0d5;
   background-color: #000000;
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -18,7 +18,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #f0f5f9;
+  color: #cbd0d5;
 }
 
 nav {
@@ -42,13 +42,30 @@ nav {
   padding: 0.5rem 1rem;
 }
 
-nav button {
-  font-size: 1.5rem;
+nav .nav-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 31vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .nav-left button {
+  font-size: 1rem;
   letter-spacing: 0.1rem;
-  color: #f0f5f9;
+  color: #cbd0d5;
   cursor: pointer;
   border: none;
   background: transparent;
+}
+
+nav .nav-left button h2 {
+  font-size: 2rem;
 }
 
 nav ul {
@@ -64,12 +81,19 @@ nav ul {
 
 nav ul li {
   padding: 0 0.3rem;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
 }
 
 nav ul li ion-icon {
   margin: 0 0.3rem;
-  color: #f0f5f9;
+  color: #cbd0d5;
   font-size: 2rem;
+}
+
+nav ul li:hover {
+  opacity: 1;
 }
 
 .container {
@@ -99,14 +123,67 @@ nav ul li ion-icon {
 }
 
 .container .front .hi-container {
-  position: absolute;
-  left: 50%;
-  top: 80%;
-  -webkit-transform: translate(-100%, -50%);
-          transform: translate(-100%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20vh auto;
 }
 
-.container .front .hi-container .hi {
+.container .front .hi-container .auto-typed,
+.container .front .hi-container .declare {
+  width: 40vw;
+  text-align: center;
+  margin-bottom: 10vh;
+}
+
+.container .front .hi-container .auto-typed span,
+.container .front .hi-container .auto-typed span strong,
+.container .front .hi-container .declare span,
+.container .front .hi-container .declare span strong {
+  color: #cbd0d5;
+  font-size: 1.5rem;
+}
+
+.container .front .hi-container .declare {
+  margin-top: 3vh;
+  border: 1px solid;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.container .front .hi-container img {
+  border-radius: 10px;
+  margin: 0 auto;
+  height: 20vh;
+  width: 10vw;
+  opacity: 1;
+}
+
+.container .front .hi-container button {
+  position: absolute;
+  display: block;
+  right: 50%;
+  bottom: 0.1vh;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.container .front .hi-container button ion-icon {
+  pointer-events: none;
+  font-size: 5rem;
+  color: #cbd0d5;
+}
+
+.frontend-projects,
+.backend-projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,67 +194,53 @@ nav ul li ion-icon {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-}
-
-.container .front .hi-container .hi .auto-typed {
-  position: absolute;
-  top: 4vh;
-}
-
-.container .front .hi-container .hi .auto-typed span,
-.container .front .hi-container .hi .auto-typed span strong {
-  color: #f0f5f9;
-  font-size: 1.5rem;
-}
-
-.container .front .hi-container .hi button {
-  margin: 50vh 0;
-  cursor: pointer;
-  border: none;
-  background: transparent;
-}
-
-.container .front .hi-container .hi button ion-icon {
-  pointer-events: none;
-  font-size: 5rem;
-  color: #f0f5f9;
-}
-
-.frontend-projects, .backend-projects {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
   width: 100%;
   height: 100vh;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(88%, rgba(255, 116, 161, 0.25)), to(rgba(0, 0, 0, 0.45)));
   background: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(255, 116, 161, 0.25) 88%, rgba(0, 0, 0, 0.45) 100%);
 }
 
-.frontend-projects img, .backend-projects img {
-  width: 87%;
+.frontend-projects img,
+.backend-projects img {
+  max-height: 30vh;
+  width: 29vw;
   opacity: 76%;
   -webkit-transition: opacity 0.7s ease-in-out;
   transition: opacity 0.7s ease-in-out;
+  -webkit-transform: translateX(44px);
+          transform: translateX(44px);
 }
 
-.frontend-projects img:hover, .backend-projects img:hover {
+.frontend-projects img:hover,
+.backend-projects img:hover {
   opacity: 100%;
 }
 
-.frontend-projects h1, .backend-projects h1 {
+.frontend-projects h1,
+.backend-projects h1 {
+  position: absolute;
+  top: 15%;
   font-size: 3rem;
-  color: #f0f5f9;
+  color: #cbd0d5;
+  padding-bottom: 10vh;
 }
 
-.frontend-projects h2, .backend-projects h2 {
+.frontend-projects h2,
+.backend-projects h2 {
+  text-align: center;
   font-size: 1.5rem;
 }
 
-.frontend-projects .project-used-tech, .backend-projects .project-used-tech {
+.frontend-projects p,
+.backend-projects p {
+  color: #cbd0d5;
+  margin: 2rem auto;
+  width: 80%;
+}
+
+.frontend-projects .project-used-tech,
+.backend-projects .project-used-tech {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,21 +250,32 @@ nav ul li ion-icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 87%;
+  width: 100%;
 }
 
-.frontend-projects .project-used-tech .tags, .backend-projects .project-used-tech .tags {
+.frontend-projects .project-used-tech .tags,
+.backend-projects .project-used-tech .tags {
   overflow: hidden;
+  color: #e2d3d3;
+  border: 1px #e2d3d3;
+  border-style: dotted;
+  border-radius: 4px;
+  margin-top: 0.4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.frontend-projects .project-used-tech .tags span, .backend-projects .project-used-tech .tags span {
+.frontend-projects .project-used-tech .tags span,
+.backend-projects .project-used-tech .tags span {
   font-size: 10px;
   white-space: nowrap;
   padding: 0.4rem 1rem;
   border-radius: 9px;
 }
 
-.frontend-projects .project-v2-links, .backend-projects .project-v2-links {
+.frontend-projects .project-links,
+.backend-projects .project-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,53 +285,71 @@ nav ul li ion-icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 5rem;
   margin-top: 1rem;
   float: right;
   clear: both;
   width: 10%;
-  padding: 0.5rem;
+  margin-right: 5rem;
+}
+
+.frontend-projects .project-links a,
+.backend-projects .project-links a {
+  padding: 0.5rem 1rem;
   border: 1px solid gray;
   border-radius: 4px;
 }
 
-.frontend-projects .project-arrow, .backend-projects .project-arrow {
+.frontend-projects .project-arrow,
+.backend-projects .project-arrow {
   position: absolute;
   bottom: 0;
   left: 47%;
 }
 
-.frontend-projects .project-arrow button, .backend-projects .project-arrow button {
+.frontend-projects .project-arrow button,
+.backend-projects .project-arrow button {
   cursor: pointer;
   border: none;
   background: transparent;
 }
 
-.frontend-projects .project-arrow button ion-icon, .backend-projects .project-arrow button ion-icon {
+.frontend-projects .project-arrow button ion-icon,
+.backend-projects .project-arrow button ion-icon {
   pointer-events: none;
   font-size: 5rem;
-  color: #f0f5f9;
+  color: #cbd0d5;
 }
 
-.skills {
+.skills,
+.certificates {
   height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(88%, rgba(255, 116, 161, 0.25)), to(rgba(0, 0, 0, 0.45)));
   background: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(255, 116, 161, 0.25) 88%, rgba(0, 0, 0, 0.45) 100%);
 }
 
-.skills h1 {
+.skills h1,
+.certificates h1 {
   font-size: 3rem;
 }
 
-.skills button {
+.skills .project-arrow,
+.certificates .project-arrow {
+  position: absolute;
+  bottom: 0;
+  left: 47%;
+}
+
+.skills .project-arrow button,
+.certificates .project-arrow button {
   cursor: pointer;
   border: none;
   background: transparent;
 }
 
-.skills button ion-icon {
+.skills .project-arrow button ion-icon,
+.certificates .project-arrow button ion-icon {
   pointer-events: none;
   font-size: 5rem;
-  color: #f0f5f9;
+  color: #cbd0d5;
 }
 /*# sourceMappingURL=App.css.map */

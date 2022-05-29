@@ -19,23 +19,40 @@ function SkillCard() {
               bg="transparent"
               m={"3rem"}
             >
-              <Image
-                w={"100%"}
-                h={"100%"}
-                marginBottom={"1rem"}
-                src={skill.logo}
-              />
-              <Text textAlign={"center"} color={"white"}>
-                {skill.name}
-              </Text>
+              {skill.name === "vue" ? (
+                <Image
+                  src={skill.logo}
+                  w={"100%"}
+                  h={"100%"}
+                  opacity={".2"}
+                  marginBottom={"1rem"}
+                />
+              ) : (
+                <Image
+                  w={"100%"}
+                  h={"100%"}
+                  marginBottom={"1rem"}
+                  src={skill.logo}
+                />
+              )}
+
+              {skill.name === "vue" ? (
+                <Text textAlign={"center"} color={"whiteAlpha"}>
+                  Loading...
+                </Text>
+              ) : (
+                <Text textAlign={"center"} color={"white"}>
+                  {skill.name}
+                </Text>
+              )}
             </GridItem>
           ))}
         </Grid>
       </Center>
       <Center className="project-arrow">
-        <Link to={"front"} spy={true} smooth={false}>
+        <Link to={"certificates"} spy={true} smooth={false}>
           <button>
-            <ion-icon name="chevron-up-outline"></ion-icon>
+            <ion-icon name="chevron-down-outline"></ion-icon>
           </button>
         </Link>
       </Center>

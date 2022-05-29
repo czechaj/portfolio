@@ -61,8 +61,23 @@ const skills = [
   },
   {
     id: 12,
+    name: "Heroku",
+    logo: "https://raw.githubusercontent.com/ivangabriele/vscode-heroku/master/res/icon.png",
+  },
+  {
+    id: 14,
+    name: "Netlify",
+    logo: "https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png",
+  },
+  {
+    id: 13,
     name: "GIT",
     logo: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
+  },
+  {
+    id: 15,
+    name: "vue",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/555px-Vue.js_Logo_2.svg.png",
   },
 ];
 
