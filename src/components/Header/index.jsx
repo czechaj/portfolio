@@ -1,6 +1,7 @@
 import React from "react";
 
 function Header() {
+  const handleClick = () => {};
   return (
     <nav>
       <div className="nav-left">
@@ -18,6 +19,9 @@ function Header() {
         </button>
         <button>
           <a href="#certificates">Certificates</a>
+        </button>
+        <button onClick={handleClick} className="responsive">
+          <ion-icon name="ellipsis-vertical-outline"></ion-icon>
         </button>
       </div>
       <ul>

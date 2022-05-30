@@ -5,7 +5,11 @@ import { Link } from "react-scroll";
 function SkillCard() {
   return (
     <>
-      <Center display={"flex"} justifyContent={"space-around"}>
+      <Center
+        display={"flex"}
+        justifyContent={"space-around"}
+        className={"skillCards"}
+      >
         <Heading textAlign={"center"} as={"h1"}>
           Skills
         </Heading>
@@ -18,6 +22,7 @@ function SkillCard() {
               h="15vh"
               bg="transparent"
               m={"3rem"}
+              className={"skill-card"}
             >
               {skill.name === "vue" ? (
                 <Image

@@ -25,6 +25,7 @@ body {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-weight: 600;
   scroll-behavior: smooth;
+  font-size: 12px;
 }
 
 a {
@@ -57,6 +58,9 @@ nav {
       h2 {
         font-size: 2rem;
       }
+    }
+    button:last-child {
+      display: none;
     }
   }
 
@@ -129,7 +133,7 @@ nav {
       }
       .declare {
         margin-top: 3vh;
-        border: 1px solid;
+        border: 1px dotted;
         background: rgba(0, 0, 0, 0.2);
         border-radius: 6px;
         padding: 1rem;
@@ -158,6 +162,23 @@ nav {
           color: $secondary;
         }
       }
+    }
+  }
+}
+
+.project-arrow {
+  position: absolute;
+  bottom: 0;
+  left: 47%;
+  button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+
+    ion-icon {
+      pointer-events: none;
+      font-size: 5rem;
+      color: $secondary;
     }
   }
 }
@@ -241,23 +262,6 @@ nav {
       border-radius: 4px;
     }
   }
-
-  .project-arrow {
-    position: absolute;
-    bottom: 0;
-    left: 47%;
-    button {
-      cursor: pointer;
-      border: none;
-      background: transparent;
-
-      ion-icon {
-        pointer-events: none;
-        font-size: 5rem;
-        color: $secondary;
-      }
-    }
-  }
 }
 
 .skills,
@@ -271,21 +275,178 @@ nav {
   h1 {
     font-size: 3rem;
   }
+}
 
-  .project-arrow {
-    position: absolute;
-    bottom: 0;
-    left: 47%;
-    button {
-      cursor: pointer;
-      border: none;
-      background: transparent;
+// _______________________________________________________________________//
+/* 
+=============================================================
+*/
 
-      ion-icon {
-        pointer-events: none;
-        font-size: 5rem;
-        color: $secondary;
+@media only screen and(max-width: 600px) {
+  body,
+  html {
+    min-width: 100vw;
+    font-size: 10px;
+  }
+  main {
+    min-width: 100%;
+    .skillCards {
+      display: block;
+      padding-top: 30%;
+      .skill-card {
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        margin: 3rem auto;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    .certificates-section {
+      padding-top: 30%;
+      display: block;
+      .certificate-cards {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 55vw);
+        .certificate-card {
+          height: 15vh;
+        }
       }
     }
   }
+
+  nav {
+    .nav-left {
+      button {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        color: $secondary;
+
+        cursor: pointer;
+        background: transparent;
+        h2 {
+          font-size: 2rem;
+        }
+      }
+
+      button:not(:first-child) {
+        display: none;
+      }
+      button:last-child {
+        display: block;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .project-arrow {
+    right: 47%;
+  }
+
+  .container {
+    .front {
+      .hi-container {
+        .auto-typed,
+        .declare {
+          width: 90vw;
+          margin-top: 3vh;
+        }
+
+        img {
+          height: 16vh;
+          width: 24vw;
+          opacity: 0.9;
+        }
+
+        button {
+          right: 44%;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .frontend-projects,
+.backend-projects {
+   
+
+  img {
+    transform: translateX(-5px);
+    max-height: 60vh;
+    width: 100%;
+    opacity: 100%;
+     
+  }
+
+  h1 {
+    position: absolute;
+    top: 15%;
+    font-size: 3rem;
+    color: $secondary;
+    padding-bottom: 10vh;
+  }
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  p {
+    color: $secondary;
+    margin: 2rem auto;
+    width: 80%;
+  }
+  .project-used-tech {
+    @include centerify();
+    // justify-content: flex-start;
+    width: 100%;
+
+    .tags {
+      overflow: hidden;
+      color: #e2d3d3;
+      border: 1px #e2d3d3;
+      border-style: dotted;
+      border-radius: 4px;
+      margin-top: 0.4rem;
+      align-items: center;
+      // colorScheme={"white"}
+      span {
+        font-size: 10px;
+        white-space: nowrap;
+        padding: 0.4rem 1rem;
+        border-radius: 9px;
+      }
+    }
+  }
+
+  .project-links {
+    @include centerify();
+
+    margin-top: 1rem;
+    float: right;
+    clear: both;
+    width: 10%;
+    margin-right: 5rem;
+
+    a {
+      padding: 0.5rem 1rem;
+      border: 1px solid gray;
+      border-radius: 4px;
+    }
+  }
+}
 }

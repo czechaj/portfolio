@@ -37,10 +37,7 @@ function Hi() {
 
   return (
     <div>
-      <div className="auto-typed">
-        <span style={{ whiteSpace: "pre" }} ref={el} />
-      </div>
-      {visible && (
+      {visible ? (
         <>
           <motion.div
             initial="hidden"
@@ -74,6 +71,10 @@ function Hi() {
             </Text>
           </motion.div>
         </>
+      ) : (
+        <div className="auto-typed">
+          <span style={{ whiteSpace: "pre" }} ref={el} />
+        </div>
       )}
       {visible && (
         <Link to="frontendProjects" spy={true} smooth={false}>

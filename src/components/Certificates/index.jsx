@@ -5,12 +5,21 @@ import certificates from "../../utils/certificates";
 function Certificates() {
   return (
     <>
-      <Center display={"flex"} justifyContent={"space-around"}>
+      <Center
+        display={"flex"}
+        justifyContent={"space-around"}
+        className={"certificates-section"}
+      >
         <Heading textAlign={"center"} as={"h1"}>
           Certificates
         </Heading>
 
-        <Grid templateColumns="repeat(2, 1fr)" marginTop={"10vh"} gap={24}>
+        <Grid
+          templateColumns="repeat(2, 1fr)"
+          marginTop={"10vh"}
+          gap={24}
+          className={"certificate-cards"}
+        >
           {certificates.map((certificate) => (
             <GridItem
               key={certificate.id}
@@ -18,6 +27,7 @@ function Certificates() {
               h="30vh"
               bg="transparent"
               m={"3rem"}
+              className={"certificate-card"}
             >
               <a
                 href={certificate.link}
@@ -39,6 +49,7 @@ function Certificates() {
           ))}
         </Grid>
       </Center>
+
       <Center className="project-arrow">
         <Link to={"front"} spy={true} smooth={false}>
           <button>

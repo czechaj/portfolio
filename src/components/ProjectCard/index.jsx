@@ -23,14 +23,7 @@ function ProjectCard({ projects }) {
             easing: "ease-out",
             padding: "1rem",
             speed: 700,
-            // breakpoints: { 640: { perPage: 1,
-            //  } },
-
-            // flickPower: 800,
-            // releaseWheel: false,
-            // cover: fale
-            // slideFocus: true,
-            // dragMinThreshold: "10px",
+            breakpoints: { 640: { perPage: 1, width: "90vw" } },
           }}
         >
           {projects.map((project) => (
@@ -43,6 +36,9 @@ function ProjectCard({ projects }) {
                     lazyLoad: "sequential",
                     autoWidth: true,
                     type: "fade",
+                    breakpoints: {
+                      640: { perPage: 1, width: "100%" },
+                    },
                   }}
                 >
                   {project.img.map((img, key) => (
