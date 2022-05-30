@@ -23,37 +23,43 @@ function ProjectCard({ projects }) {
             easing: "ease-out",
             padding: "1rem",
             speed: 700,
-            breakpoints: { 640: { perPage: 1, width: "90vw" } },
+            breakpoints: { 900: { perPage: 1, width: "90vw" } },
           }}
         >
           {projects.map((project) => (
             <SplideSlide key={project.id}>
-              <a target={"_blank"} rel={"noreferrer"} href={project.links[0]}>
-                <Splide
-                  options={{
-                    arrows: false,
-                    rewind: true,
-                    lazyLoad: "sequential",
-                    autoWidth: true,
-                    type: "fade",
-                    breakpoints: {
-                      640: { perPage: 1, width: "100%" },
-                    },
-                  }}
-                >
-                  {project.img.map((img, key) => (
-                    <SplideSlide key={key}>
+              <Splide
+                options={{
+                  arrows: false,
+                  rewind: true,
+                  lazyLoad: "sequential",
+                  // autoWidth: true,
+                  width: "90%",
+                  type: "fade",
+                  breakpoints: {
+                    640: { perPage: 1, width: "100%" },
+                  },
+                }}
+              >
+                {project.img.map((img, key) => (
+                  <SplideSlide key={key}>
+                    <a
+                      target={"_blank"}
+                      rel={"noreferrer"}
+                      href={project.links[0]}
+                    >
                       <Image src={img} alt={project.id} />
-                    </SplideSlide>
-                  ))}
-                </Splide>
-                <Text as={"h2"} marginTop={"1rem"}>
-                  {project.name}
-                </Text>
-                <Text as={"p"} color={"white"}>
-                  {project.description}
-                </Text>
-              </a>
+                    </a>
+                  </SplideSlide>
+                ))}
+              </Splide>
+              <Text as={"h2"} marginTop={"1rem"}>
+                {project.name}
+              </Text>
+              <Text as={"p"} color={"white"}>
+                {project.description}
+              </Text>
+
               <div className="project-used-tech">
                 {project.usedTechs.map((tech, key) => (
                   <div className="tags" key={key}>

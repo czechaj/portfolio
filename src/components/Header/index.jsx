@@ -6,7 +6,10 @@ function Header() {
     <nav>
       <div className="nav-left">
         <button>
-          <h2>czechaj</h2>
+          <a href="#front">
+            {" "}
+            <h2>czechaj</h2>
+          </a>
         </button>
         <button>
           <a href="#frontendProjects">Front-End-Projects</a>

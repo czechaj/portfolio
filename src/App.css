@@ -32,9 +32,9 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
+  z-index: 1;
   height: 5rem;
   width: 100%;
   -webkit-box-pack: justify;
@@ -47,7 +47,7 @@ nav .nav-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 31vw;
+  width: 36vw;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -116,7 +116,7 @@ nav ul li:hover {
 }
 
 .container .background {
-  background: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170") center center fixed no-repeat;
+  background: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") center center fixed no-repeat;
   min-height: 500px;
 }
 
@@ -228,6 +228,7 @@ nav ul li:hover {
   max-height: 30vh;
   width: 29vw;
   opacity: 76%;
+  overflow: hidden;
   -webkit-transition: opacity 0.7s ease-in-out;
   transition: opacity 0.7s ease-in-out;
   -webkit-transform: translateX(44px);
@@ -336,7 +337,7 @@ nav ul li:hover {
 /* 
 =============================================================
 */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   body,
   html {
     min-width: 100vw;
@@ -392,6 +393,9 @@ nav ul li:hover {
     display: block;
     font-size: 2rem;
   }
+  .container .front .hi-container {
+    margin-top: 5rem;
+  }
   .container .front .hi-container .auto-typed,
   .container .front .hi-container .declare {
     width: 90vw;
@@ -406,6 +410,7 @@ nav ul li:hover {
     right: 44%;
   }
   .container .background {
+    background: url("./img/background.jpg") center center fixed no-repeat;
     background-size: 100vw 100vh;
   }
   .frontend-projects img,
