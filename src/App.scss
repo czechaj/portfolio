@@ -50,18 +50,35 @@ nav {
     justify-content: space-between;
     align-items: center;
     button {
+      h2 {
+        font-size: 2rem;
+      }
       font-size: 1rem;
       letter-spacing: 0.1rem;
       color: $secondary;
+      opacity: 0.8;
       cursor: pointer;
       border: none;
       background: transparent;
-      h2 {
-        font-size: 2rem;
+      transition: all ease-in-out 0.25s;
+      &:hover {
+        opacity: 1;
       }
     }
     button:last-child {
       display: none;
+    }
+    .downsize::after {
+      content: "";
+      width: 0%;
+      height: 1px;
+      background-color: $secondary;
+      display: block;
+      transition: all ease-in-out 0.25s;
+    }
+
+    .downsize:hover::after {
+      width: 100%;
     }
   }
 
@@ -73,7 +90,7 @@ nav {
 
     li {
       padding: 0 0.3rem;
-      opacity: 0.7;
+      opacity: 0.8;
       transition: opacity 0.3s linear;
       ion-icon {
         margin: 0 0.3rem;
@@ -82,6 +99,18 @@ nav {
       }
       &:hover {
         opacity: 1;
+      }
+      &::before {
+        position: absolute;
+        top: 6px;
+        content: "";
+        width: 0;
+        background-color: $secondary;
+        height: 0.1rem;
+        transition: all ease-in-out 300ms;
+      }
+      &:hover::before {
+        width: 2.56rem;
       }
     }
   }
@@ -101,15 +130,15 @@ nav {
   }
 
   .background {
-    background: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") center center fixed no-repeat ;
+    background: url("./img/background2.jpg") center center fixed no-repeat;
+    background-size: 100vw 100vh;
     min-height: 500px;
-
   }
 
   .front {
     background: linear-gradient(
-      rgba(105, 211, 252, 0.25) 0%,
-      rgba(255, 116, 161, 0.25) 86%,
+      rgba(57, 74, 80, 0.25) 0%,
+      rgba(56, 50, 52, 0.25) 86%,
       rgba(1, 0, 0, 0.25) 100%
     );
     background-size: cover;
@@ -161,6 +190,19 @@ nav {
           font-size: 5rem;
           color: $secondary;
         }
+      }
+    }
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    span {
+      font-size: 0.9rem;
+      color: rgba($color: $secondary, $alpha: 0.7);
+      a {
+        color: $secondary;
       }
     }
   }
@@ -278,11 +320,8 @@ nav {
   }
 }
 
-    /*=========================================================================================================================================
+/*=========================================================================================================================================
     ==========================================================================================================================================*/
-
-
-
 
 @media only screen and(max-width: 900px) {
   body,
@@ -303,7 +342,7 @@ nav {
         margin: 3rem auto;
       }
       h1 {
-        padding: 3rem;         
+        padding: 3rem;
       }
     }
 
@@ -346,42 +385,40 @@ nav {
         top: 7px;
         left: 99px;
       }
-
-
-      
     }
-    .dropdown{
+    .dropdown {
       display: flex;
       flex-direction: column;
       transform: translateY(39%);
       align-items: flex-start;
-      background-color: rgba($color: #000000, $alpha: .4) ;
-          button:not(:first-child){
-            display: flex;
-            
-          }
-          button:nth-child(6){
-            position: absolute;
-            top:0;
-            left: 89px;
-            font-size: 3rem;
-          }
-       .downsize{
-         margin-top: 1rem;
-       }
-     
+      background-color: rgba($color: #000000, $alpha: 0.4);
+      button:not(:first-child) {
+        display: flex;
+      }
+      button:nth-child(6) {
+        position: absolute;
+        top: 0;
+        left: 89px;
+        font-size: 3rem;
+      }
+      .downsize {
+        margin-top: 1rem;
+      }
+      .downsize::after {
+        
+        display: none;
+      }
   
     }
   }
-  
 
-  
   .container {
     .front {
       .hi-container {
         margin-top: 15rem;
         .auto-typed,
         .declare {
+          font-size: 1.25rem;
           width: 90vw;
           margin-top: 3vh;
         }
@@ -398,9 +435,8 @@ nav {
       }
     }
     .background {
-      background: url('./img/background.jpg') center center fixed no-repeat ;
+      background: url("./img/background2.jpg") center center fixed no-repeat;
       background-size: 100vw 100vh;
-
     }
   }
 
@@ -416,7 +452,7 @@ nav {
     h1 {
       top: 10%;
       padding-bottom: 4rem;
-    }  
+    }
     .project-used-tech {
       .tags {
         span {
@@ -432,9 +468,7 @@ nav {
     }
   }
 
-
   .project-arrow {
     right: 47%;
   }
-
 }

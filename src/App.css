@@ -60,17 +60,38 @@ nav .nav-left button {
   font-size: 1rem;
   letter-spacing: 0.1rem;
   color: #cbd0d5;
+  opacity: 0.8;
   cursor: pointer;
   border: none;
   background: transparent;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
 }
 
 nav .nav-left button h2 {
   font-size: 2rem;
 }
 
+nav .nav-left button:hover {
+  opacity: 1;
+}
+
 nav .nav-left button:last-child {
   display: none;
+}
+
+nav .nav-left .downsize::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: #cbd0d5;
+  display: block;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
+}
+
+nav .nav-left .downsize:hover::after {
+  width: 100%;
 }
 
 nav ul {
@@ -86,7 +107,7 @@ nav ul {
 
 nav ul li {
   padding: 0 0.3rem;
-  opacity: 0.7;
+  opacity: 0.8;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
 }
@@ -99,6 +120,21 @@ nav ul li ion-icon {
 
 nav ul li:hover {
   opacity: 1;
+}
+
+nav ul li::before {
+  position: absolute;
+  top: 6px;
+  content: "";
+  width: 0;
+  background-color: #cbd0d5;
+  height: 0.1rem;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+nav ul li:hover::before {
+  width: 2.56rem;
 }
 
 .container {
@@ -116,13 +152,14 @@ nav ul li:hover {
 }
 
 .container .background {
-  background: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") center center fixed no-repeat;
+  background: url("./img/background2.jpg") center center fixed no-repeat;
+  background-size: 100vw 100vh;
   min-height: 500px;
 }
 
 .container .front {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(105, 211, 252, 0.25)), color-stop(86%, rgba(255, 116, 161, 0.25)), to(rgba(1, 0, 0, 0.25)));
-  background: linear-gradient(rgba(105, 211, 252, 0.25) 0%, rgba(255, 116, 161, 0.25) 86%, rgba(1, 0, 0, 0.25) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(57, 74, 80, 0.25)), color-stop(86%, rgba(56, 50, 52, 0.25)), to(rgba(1, 0, 0, 0.25)));
+  background: linear-gradient(rgba(57, 74, 80, 0.25) 0%, rgba(56, 50, 52, 0.25) 86%, rgba(1, 0, 0, 0.25) 100%);
   background-size: cover;
 }
 
@@ -183,6 +220,21 @@ nav ul li:hover {
 .container .front .hi-container button ion-icon {
   pointer-events: none;
   font-size: 5rem;
+  color: #cbd0d5;
+}
+
+.container footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+}
+
+.container footer span {
+  font-size: 0.9rem;
+  color: rgba(203, 208, 213, 0.7);
+}
+
+.container footer span a {
   color: #cbd0d5;
 }
 
@@ -427,11 +479,15 @@ nav ul li:hover {
   nav .dropdown .downsize {
     margin-top: 1rem;
   }
+  nav .dropdown .downsize::after {
+    display: none;
+  }
   .container .front .hi-container {
     margin-top: 15rem;
   }
   .container .front .hi-container .auto-typed,
   .container .front .hi-container .declare {
+    font-size: 1.25rem;
     width: 90vw;
     margin-top: 3vh;
   }
@@ -444,7 +500,7 @@ nav ul li:hover {
     right: 44%;
   }
   .container .background {
-    background: url("./img/background.jpg") center center fixed no-repeat;
+    background: url("./img/background2.jpg") center center fixed no-repeat;
     background-size: 100vw 100vh;
   }
   .frontend-projects img,

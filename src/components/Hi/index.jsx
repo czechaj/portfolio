@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 import { Link } from "react-scroll";
 import { Text } from "@chakra-ui/react";
-import me from "../../img/me.jpg";
+import me from "../../img/me2.jpeg";
 import { motion } from "framer-motion";
 
 function Hi() {

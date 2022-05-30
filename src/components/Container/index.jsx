@@ -4,6 +4,7 @@ import Header from "../Header";
 import Hi from "../Hi";
 import SkillCard from "../SkillCard";
 import Certificates from "../Certificates";
+import Footer from "../Footer";
 
 import projects from "../../utils/projects";
 import backendProjects from "../../utils/backendProjects";
@@ -18,6 +19,7 @@ function Container() {
           <div className="hi-container">
             <Hi />
           </div>
+          <Footer />
         </div>
       </div>
       <div id="frontendProjects" className="container frontend-projects">
