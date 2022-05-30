@@ -57,14 +57,14 @@ function Hi() {
               developed himself mostly on Javascript and React. I am comfortable
               about working with API's, state managements and responsive design.
               Also I'm experienced about Back-End fundamentals as I develop
-              starter projects with NodeJS. Nowadays, I'm focusing to learn
+              starter projects with NodeJS. Nowadays, I'm focusing on learning
               vue.js and GraphQL. I really enjoy the phase of writing code and
               learning new technologies that make this job easier.
             </Text>
             <Text my={"1rem"} textAlign={"left"}>
               Apart from this very intense learning process; I can say that I
-              enjoy doing sports, especially playing football, nature walks and
-              camping.
+              enjoy doing sports, especially playing football, watching movies
+              and nature walks.
             </Text>
             <Text textAlign={"left"}>
               You can see my projects and skills in next pages.

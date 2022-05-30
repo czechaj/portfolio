@@ -334,9 +334,8 @@ nav ul li:hover {
   font-size: 3rem;
 }
 
-/* 
-=============================================================
-*/
+/*=========================================================================================================================================
+    ==========================================================================================================================================*/
 @media only screen and (max-width: 900px) {
   body,
   html {
@@ -376,6 +375,9 @@ nav ul li:hover {
   main .certificates-section .certificate-cards .certificate-card {
     height: 15vh;
   }
+  nav .nav-left {
+    width: 30vw;
+  }
   nav .nav-left button {
     font-size: 1rem;
     letter-spacing: 0.1rem;
@@ -390,11 +392,43 @@ nav ul li:hover {
     display: none;
   }
   nav .nav-left button:last-child {
+    position: absolute;
     display: block;
-    font-size: 2rem;
+    font-size: 3rem;
+    top: 7px;
+    left: 99px;
+  }
+  nav .dropdown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: translateY(39%);
+            transform: translateY(39%);
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  nav .dropdown button:not(:first-child) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav .dropdown button:nth-child(6) {
+    position: absolute;
+    top: 0;
+    left: 89px;
+    font-size: 3rem;
+  }
+  nav .dropdown .downsize {
+    margin-top: 1rem;
   }
   .container .front .hi-container {
-    margin-top: 5rem;
+    margin-top: 15rem;
   }
   .container .front .hi-container .auto-typed,
   .container .front .hi-container .declare {

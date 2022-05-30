@@ -1,26 +1,33 @@
 import React from "react";
 
 function Header() {
-  const handleClick = () => {};
+  const handleClick = () => {
+    const droppingButtons = document.querySelector(".nav-left");
+    if (droppingButtons.className === "nav-left") {
+      droppingButtons.classList += " dropdown";
+    } else {
+      droppingButtons.classList = "nav-left";
+    }
+  };
   return (
     <nav>
       <div className="nav-left">
-        <button>
+        <button className="drop">
           <a href="#front">
             {" "}
             <h2>czechaj</h2>
           </a>
         </button>
-        <button>
+        <button className="drop downsize">
           <a href="#frontendProjects">Front-End-Projects</a>
         </button>
-        <button>
+        <button className="drop downsize">
           <a href="#backendProjects">Back-End Projects</a>
         </button>
-        <button>
+        <button className="drop downsize">
           <a href="#skills">Skills</a>
         </button>
-        <button>
+        <button className="drop downsize">
           <a href="#certificates">Certificates</a>
         </button>
         <button onClick={handleClick} className="responsive">
