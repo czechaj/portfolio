@@ -17,8 +17,8 @@ function Hi() {
         "",
       ],
 
-      typeSpeed: 50,
-      backSpeed: 40,
+      typeSpeed: 40,
+      backSpeed: 30,
       showCursor: false,
       onComplete: () => setVisible(true),
     };
