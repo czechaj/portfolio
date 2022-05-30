@@ -345,10 +345,11 @@ nav ul li:hover {
   }
   main {
     min-width: 100%;
+    overflow-y: scroll;
   }
   main .skillCards {
     display: block;
-    padding-top: 30%;
+    padding-top: 10%;
   }
   main .skillCards .skill-card {
     text-align: center;
@@ -357,10 +358,10 @@ nav ul li:hover {
     margin: 3rem auto;
   }
   main .skillCards h1 {
-    font-size: 3rem;
+    padding: 3rem;
   }
   main .certificates-section {
-    padding-top: 30%;
+    padding-top: 15%;
     display: block;
   }
   main .certificates-section .certificate-cards {
@@ -392,9 +393,6 @@ nav ul li:hover {
     display: block;
     font-size: 2rem;
   }
-  .project-arrow {
-    right: 47%;
-  }
   .container .front .hi-container .auto-typed,
   .container .front .hi-container .declare {
     width: 90vw;
@@ -408,8 +406,12 @@ nav ul li:hover {
   .container .front .hi-container button {
     right: 44%;
   }
+  .container .background {
+    background-attachment: unset;
+  }
   .frontend-projects img,
   .backend-projects img {
+    margin-top: 4rem;
     -webkit-transform: translateX(-5px);
             transform: translateX(-5px);
     max-height: 60vh;
@@ -418,77 +420,20 @@ nav ul li:hover {
   }
   .frontend-projects h1,
   .backend-projects h1 {
-    position: absolute;
-    top: 15%;
-    font-size: 3rem;
-    color: #cbd0d5;
-    padding-bottom: 10vh;
-  }
-  .frontend-projects h2,
-  .backend-projects h2 {
-    text-align: center;
-    font-size: 1.5rem;
-  }
-  .frontend-projects p,
-  .backend-projects p {
-    color: #cbd0d5;
-    margin: 2rem auto;
-    width: 80%;
-  }
-  .frontend-projects .project-used-tech,
-  .backend-projects .project-used-tech {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-  }
-  .frontend-projects .project-used-tech .tags,
-  .backend-projects .project-used-tech .tags {
-    overflow: hidden;
-    color: #e2d3d3;
-    border: 1px #e2d3d3;
-    border-style: dotted;
-    border-radius: 4px;
-    margin-top: 0.4rem;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    top: 10%;
+    padding-bottom: 4rem;
   }
   .frontend-projects .project-used-tech .tags span,
   .backend-projects .project-used-tech .tags span {
-    font-size: 10px;
+    font-size: 0.7rem;
     white-space: nowrap;
-    padding: 0.4rem 1rem;
-    border-radius: 9px;
-  }
-  .frontend-projects .project-links,
-  .backend-projects .project-links {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 1rem;
-    float: right;
-    clear: both;
-    width: 10%;
-    margin-right: 5rem;
   }
   .frontend-projects .project-links a,
   .backend-projects .project-links a {
-    padding: 0.5rem 1rem;
-    border: 1px solid gray;
-    border-radius: 4px;
+    font-size: 0.99rem;
+  }
+  .project-arrow {
+    right: 47%;
   }
 }
 /*# sourceMappingURL=App.css.map */

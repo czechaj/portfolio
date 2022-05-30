@@ -13,11 +13,11 @@ function Hi() {
     const options = {
       strings: [
         "Hi",
-        "I'm Cevdet Ziya Erdoğan ^1000\n I'm a <strong>Front-End Developer</strong>",
+        "I'm Cevdet Ziya Erdoğan ^400\n I'm a <strong>Front-End Developer</strong>",
         "",
       ],
 
-      typeSpeed: 70,
+      typeSpeed: 50,
       backSpeed: 40,
       showCursor: false,
       onComplete: () => setVisible(true),
