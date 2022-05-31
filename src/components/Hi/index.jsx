@@ -31,35 +31,29 @@ function Hi() {
   }, []);
 
   const variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 0.8 },
+    hidden: { opacity: 0, y: 0 },
+    visible: { opacity: 0.8, y: 10 },
   };
 
   return (
     <div>
       {visible ? (
-        <>
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={variants}
-            className="image"
-          >
-            <img loading="lazy" src={me} alt="" />
-          </motion.div>
-          <motion.div
-            animate={{ y: 10 }}
-            transition={{ ease: "easeOut", duration: 1 }}
-            className="declare"
-          >
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
+          <img loading="lazy" src={me} alt="" />
+          <div className="declare">
             <Text textAlign={"left"}>
               Hello, I am Cevdet Ziya Erdoğan. I am a web developer who has
-              developed himself mostly on Javascript and React. I am comfortable
-              about working with API's, state managements and responsive design.
-              Also I'm experienced about Back-End fundamentals as I develop
-              starter projects with NodeJS. Nowadays, I'm focusing on learning
-              vue.js and GraphQL. I really enjoy the phase of writing code and
-              learning new technologies that make this job easier.
+              developed himself mostly on Javascript and React. I am good at
+              working with API's, state managements and responsive design. Also
+              I'm experienced about Back-End fundamentals as I develop starter
+              projects with NodeJS. Nowadays, I'm focusing on learning vue.js
+              and GraphQL. I really enjoy the phase of writing code and learning
+              new technologies that make this job easier.
             </Text>
             <Text my={"1rem"} textAlign={"left"}>
               Apart from this very intense learning process; I can say that I
@@ -69,8 +63,8 @@ function Hi() {
             <Text textAlign={"left"}>
               You can see my projects and skills in next pages.
             </Text>
-          </motion.div>
-        </>
+          </div>
+        </motion.div>
       ) : (
         <div className="auto-typed">
           <span style={{ whiteSpace: "pre" }} ref={el} />

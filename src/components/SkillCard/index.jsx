@@ -18,8 +18,8 @@ function SkillCard() {
           {skills.map((skill) => (
             <GridItem
               key={skill.id}
-              w="9vw"
-              h="15vh"
+              w="7vw"
+              h="11vh"
               bg="transparent"
               m={"3rem"}
               className={"skill-card"}

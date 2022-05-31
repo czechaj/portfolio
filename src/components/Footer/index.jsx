@@ -5,8 +5,12 @@ function Footer() {
     <footer>
       <span>
         Photo by{" "}
-        <a href="https://unsplash.com/@heytowner?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-          John Towner
+        <a
+          target={"_blank"}
+          rel={"noreferrer"}
+          href="https://unsplash.com/@elliottengelmann?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        >
+          Elliott Engelmann
         </a>{" "}
         on Unsplash
       </span>

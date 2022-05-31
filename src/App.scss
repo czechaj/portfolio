@@ -33,7 +33,7 @@ a {
   color: $secondary;
 }
 
-//component
+// /*  */ //
 nav {
   @include centerify();
   position: fixed;
@@ -46,14 +46,14 @@ nav {
 
   .nav-left {
     display: flex;
-    width: 36vw;
+    width: 50vw;
     justify-content: space-between;
     align-items: center;
     button {
       h2 {
         font-size: 2rem;
       }
-      font-size: 1rem;
+      font-size: 1.2rem;
       letter-spacing: 0.1rem;
       color: $secondary;
       opacity: 0.8;
@@ -130,10 +130,10 @@ nav {
   }
 
   .background {
-    background-image: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-background-size: cover;
-position:fixed;
-min-height: 100px;
+    background: url("./img/background.jpg");
+    background-size: cover;
+    position: fixed;
+    min-height: 100px;
 
     // background: url("./img/background2.jpg") center center fixed no-repeat;
     // background-size: 100vw 100vh;
@@ -150,38 +150,34 @@ min-height: 100px;
 
     .hi-container {
       @include centerify();
-      margin: 20vh auto;
+      margin: 19.4vh auto;
 
       .auto-typed,
       .declare {
-        width: 40vw;
+        width: 60vw;
         text-align: center;
-
         margin-bottom: 10vh;
-
         span,
         span strong {
           color: $secondary;
           font-size: 1.5rem;
         }
       }
+      img {
+        border-radius: 10px;
+        margin: 0 auto;
+        height: 23vh;
+        width: 11vw;
+      }
       .declare {
-        margin-top: 3vh;
+        margin-top: 1vh;
         border: 1px dotted;
         background: rgba(0, 0, 0, 0.2);
         border-radius: 6px;
         padding: 1rem;
       }
-      img {
-        border-radius: 10px;
-        margin: 0 auto;
-        height: 20vh;
-        width: 10vw;
-        opacity: 1;
-      }
 
       button {
-        // margin: 50vh auto;
         position: absolute;
         display: block;
         right: 50%;
@@ -238,9 +234,9 @@ min-height: 100px;
   height: 100vh;
   align-items: center;
   background: linear-gradient(
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(255, 116, 161, 0.25) 88%,
-    rgba(0, 0, 0, 0.45) 100%
+    rgba(57, 74, 80, 0.25) 0%,
+    rgba(56, 50, 52, 0.25) 86%,
+    rgba(1, 0, 0, 0.25) 100%
   );
 
   img {
@@ -314,25 +310,75 @@ min-height: 100px;
 
 .skills,
 .certificates {
+  padding-top: 2rem;
   height: 100vh;
+
   background: linear-gradient(
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(255, 116, 161, 0.25) 88%,
-    rgba(0, 0, 0, 0.45) 100%
+    rgba(57, 74, 80, 0.25) 0%,
+    rgba(56, 50, 52, 0.25) 86%,
+    rgba(1, 0, 0, 0.25) 100%
   );
+  background-size: cover;
   h1 {
     font-size: 3rem;
   }
 }
 
-/*=========================================================================================================================================
-    ==========================================================================================================================================*/
+// /* queries  */ //
 
-@media only screen and(max-width: 900px) {
+@media only screen and (min-width: 120px) and (max-width: 375px) {
   body,
   html {
     min-width: 100vw;
-    font-size: 10px;
+    font-size: 8px;
+  }
+  nav {
+    .nav-left {
+      width: 30vw;
+      button {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        color: $secondary;
+
+        h2 {
+          font-size: 2rem;
+        }
+      }
+
+      button:not(:first-child) {
+        display: none;
+      }
+      button:last-child {
+        position: absolute;
+        display: block;
+        font-size: 3rem;
+        top: 7px;
+        left: 99px;
+      }
+    }
+    .dropdown {
+      display: flex;
+      flex-direction: column;
+      transform: translateY(39%);
+      align-items: flex-start;
+      background-color: rgba($color: #000000, $alpha: 0.4);
+      button:not(:first-child) {
+        display: flex;
+      }
+      button:nth-child(6) {
+        position: absolute;
+        top: 0;
+        left: 89px;
+        font-size: 3rem;
+      }
+      .downsize {
+        margin: 0.6rem 0;
+        font-size: 1.1rem;
+      }
+      .downsize::after {
+        display: none;
+      }
+    }
   }
   main {
     min-width: 100%;
@@ -342,8 +388,8 @@ min-height: 100px;
       padding-top: 10%;
       .skill-card {
         text-align: center;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         margin: 3rem auto;
       }
       h1 {
@@ -357,14 +403,86 @@ min-height: 100px;
       .certificate-cards {
         display: grid;
         justify-content: center;
-        grid-template-columns: repeat(2, 55vw);
+        grid-template-columns: repeat(1, 65vw);
         .certificate-card {
-          height: 15vh;
+          height: 11vh;
         }
       }
     }
   }
+  .container {
+    .front {
+      .hi-container {
+        margin-top: 15rem;
+        .auto-typed,
+        .declare {
+          font-size: 1.25rem;
+          width: 90vw;
+          margin-top: 3vh;
+        }
 
+        img {
+          height: 16vh;
+          width: 27vw;
+        }
+
+        button {
+          right: 44%;
+        }
+      }
+    }
+    .background {
+      background: url("./img/background.jpg") center center fixed no-repeat;
+      background-size: 100vw 100vh;
+    }
+  }
+  .skills {
+    padding-top: 0;
+  }
+  .frontend-projects,
+  .backend-projects {
+    background: linear-gradient(
+      rgba(57, 74, 80, 0.25) 0%,
+      rgba(94, 95, 73, 0.4) 70%,
+      rgba(34, 24, 24, 0.271) 100%
+    );
+    img {
+      margin-top: 4rem;
+      transform: translateX(-5px);
+      max-height: 23.5vh;
+      width: 100%;
+      opacity: 100%;
+    }
+    h1 {
+      top: 10%;
+    }
+
+    .project-used-tech {
+      .tags {
+        span {
+          font-size: 0.7rem;
+          white-space: nowrap;
+        }
+      }
+    }
+    .project-links {
+      a {
+        font-size: 0.99rem;
+      }
+    }
+  }
+
+  .project-arrow {
+    right: 47%;
+  }
+}
+
+@media only screen and(min-width:375px) and (max-width: 600px) {
+  body,
+  html {
+    min-width: 100vw;
+    font-size: 10px;
+  }
   nav {
     .nav-left {
       width: 30vw;
@@ -407,13 +525,43 @@ min-height: 100px;
         font-size: 3rem;
       }
       .downsize {
-        margin-top: 1rem;
+        margin: 0.6rem 0;
+        font-size: 1.1rem;
       }
       .downsize::after {
-        
         display: none;
       }
-  
+    }
+  }
+
+  main {
+    min-width: 100%;
+    overflow-y: scroll;
+    .skillCards {
+      display: block;
+      padding-top: 10%;
+      .skill-card {
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        margin: 3rem auto;
+      }
+      h1 {
+        padding: 3rem;
+      }
+    }
+
+    .certificates-section {
+      padding-top: 15%;
+      display: block;
+      .certificate-cards {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 55vw);
+        .certificate-card {
+          height: 15vh;
+        }
+      }
     }
   }
 
@@ -430,8 +578,7 @@ min-height: 100px;
 
         img {
           height: 16vh;
-          width: 24vw;
-          opacity: 0.9;
+          width: 27vw;
         }
 
         button {
@@ -440,24 +587,31 @@ min-height: 100px;
       }
     }
     .background {
-      background: url("./img/background2.jpg") center center fixed no-repeat;
+      background: url("./img/background.jpg") center center fixed no-repeat;
       background-size: 100vw 100vh;
     }
   }
-
+  .skills {
+    padding-top: 0;
+  }
   .frontend-projects,
   .backend-projects {
+    background: linear-gradient(
+      rgba(57, 74, 80, 0.25) 0%,
+      rgba(94, 95, 73, 0.4) 70%,
+      rgba(34, 24, 24, 0.271) 100%
+    );
     img {
       margin-top: 4rem;
       transform: translateX(-5px);
-      max-height: 60vh;
+      max-height: 23.5vh;
       width: 100%;
       opacity: 100%;
     }
     h1 {
       top: 10%;
-      padding-bottom: 4rem;
     }
+
     .project-used-tech {
       .tags {
         span {
@@ -473,6 +627,199 @@ min-height: 100px;
     }
   }
 
+  .project-arrow {
+    right: 47%;
+  }
+}
+
+@media only screen and(min-width:600px) and (max-width: 925px) {
+  body,
+  html {
+    min-width: 100vw;
+    font-size: 11px;
+  }
+  nav {
+    .nav-left {
+      width: 80vw;
+
+      .downsize {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  main {
+    min-width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    .skillCards {
+      display: block;
+      padding-top: 10%;
+      .skill-card {
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        margin: 3rem auto;
+      }
+      h1 {
+        padding: 3rem;
+      }
+    }
+
+    .certificates-section {
+      padding-top: 15%;
+      display: block;
+      .certificate-cards {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 55vw);
+        .certificate-card {
+          height: 20vh;
+        }
+      }
+    }
+  }
+
+  .container {
+    .front {
+      .hi-container {
+        margin-top: 15rem;
+        .auto-typed,
+        .declare {
+          font-size: 1.15rem;
+          width: 90vw;
+          margin-top: 3vh;
+        }
+
+        img {
+          height: 25vh;
+          width: 20vw;
+        }
+
+        button {
+          right: 44%;
+        }
+      }
+    }
+    .background {
+      background: url("./img/background.jpg") center center fixed no-repeat;
+      background-size: 100vw 100vh;
+    }
+  }
+  .skills {
+    padding-top: 0;
+  }
+  .frontend-projects,
+  .backend-projects {
+    background: linear-gradient(
+      rgba(57, 74, 80, 0.25) 0%,
+      rgba(94, 95, 73, 0.4) 70%,
+      rgba(34, 24, 24, 0.271) 100%
+    );
+    img {
+      margin-top: 4rem;
+      transform: translateX(58px);
+      min-height: 35vh;
+      width: 80%;
+      opacity: 100%;
+    }
+    h1 {
+      top: 10%;
+    }
+
+    .project-used-tech {
+      .tags {
+        span {
+          font-size: 0.7rem;
+          white-space: nowrap;
+        }
+      }
+    }
+    .project-links {
+      a {
+        font-size: 0.99rem;
+      }
+    }
+  }
+
+  .project-arrow {
+    right: 47%;
+  }
+}
+
+@media only screen and (min-width: 925px) and (max-width: 1200px) {
+  body,
+  html {
+    min-width: 100vw;
+    font-size: 12px;
+  }
+  nav {
+    .nav-left {
+      width: 50vw;
+
+      .downsize {
+        font-size: 1rem;
+      }
+    }
+  }
+  main {
+    min-width: 100%;
+    overflow-y: scroll;
+    .skillCards {
+      padding-top: 10%;
+      .skill-card {
+        text-align: center;
+        width: 60px;
+        height: 60px;
+        margin: 2rem;
+      }
+    }
+  }
+  .container {
+    .front {
+      .hi-container {
+        button {
+          right: 47.5%;
+        }
+      }
+    }
+  }
+  .skills {
+    padding-top: 0;
+  }
+
+  .frontend-projects,
+  .backend-projects {
+    background: linear-gradient(
+      rgba(57, 74, 80, 0.25) 0%,
+      rgba(94, 95, 73, 0.4) 70%,
+      rgba(34, 24, 24, 0.271) 100%
+    );
+    img {
+      margin-top: 4rem;
+      transform: translateX(58px);
+      min-height: 23vh;
+      width: 80%;
+      opacity: 100%;
+    }
+    h1 {
+      top: 10%;
+    }
+
+    .project-used-tech {
+      .tags {
+        span {
+          font-size: 0.7rem;
+          white-space: nowrap;
+        }
+      }
+    }
+    .project-links {
+      a {
+        font-size: 0.99rem;
+      }
+    }
+  }
   .project-arrow {
     right: 47%;
   }

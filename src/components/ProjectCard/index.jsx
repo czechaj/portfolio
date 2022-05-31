@@ -21,23 +21,23 @@ function ProjectCard({ projects }) {
             perPage: 2,
             perMove: 1,
             easing: "ease-out",
-            padding: "1rem",
+            padding: "2rem",
             speed: 700,
-            breakpoints: { 900: { perPage: 1, width: "90vw" } },
+            breakpoints: { 925: { perPage: 1, width: "90vw", padding: 0 } },
           }}
         >
           {projects.map((project) => (
-            <SplideSlide key={project.id}>
+            <SplideSlide className="test" key={project.id}>
               <Splide
                 options={{
                   arrows: false,
                   rewind: true,
                   lazyLoad: "sequential",
-                  // autoWidth: true,
+                  height: "100%",
                   width: "90%",
                   type: "fade",
                   breakpoints: {
-                    640: { perPage: 1, width: "100%" },
+                    925: { width: "100%" },
                   },
                 }}
               >
