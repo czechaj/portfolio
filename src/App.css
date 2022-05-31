@@ -388,14 +388,14 @@ nav ul li:hover::before {
   font-size: 3rem;
 }
 
-@media only screen and (min-width: 120px) and (max-width: 375px) {
+@media only screen and (min-width: 120px) and (max-width: 374px) {
   body,
   html {
     min-width: 100vw;
     font-size: 8px;
   }
   nav .nav-left {
-    width: 30vw;
+    width: 45vw;
   }
   nav .nav-left button {
     font-size: 1rem;
@@ -412,8 +412,8 @@ nav ul li:hover::before {
     position: absolute;
     display: block;
     font-size: 3rem;
-    top: 7px;
-    left: 99px;
+    top: 3px;
+    left: 96px;
   }
   nav .dropdown {
     display: -webkit-box;
@@ -423,8 +423,8 @@ nav ul li:hover::before {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-transform: translateY(39%);
-            transform: translateY(39%);
+    -webkit-transform: translateY(39.5%);
+            transform: translateY(39.5%);
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -536,7 +536,7 @@ nav ul li:hover::before {
   }
 }
 
-@media only screen and (min-width: 375px) and (max-width: 600px) {
+@media only screen and (min-width: 374px) and (max-width: 600px) {
   body,
   html {
     min-width: 100vw;
@@ -549,8 +549,8 @@ nav ul li:hover::before {
     font-size: 1rem;
     letter-spacing: 0.1rem;
     color: #cbd0d5;
-    cursor: pointer;
     background: transparent;
+    cursor: pointer;
   }
   nav .nav-left button h2 {
     font-size: 2rem;
@@ -573,8 +573,8 @@ nav ul li:hover::before {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-transform: translateY(39%);
-            transform: translateY(39%);
+    -webkit-transform: translateY(40%);
+            transform: translateY(40%);
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -648,7 +648,7 @@ nav ul li:hover::before {
     right: 44%;
   }
   .container .background {
-    background: url("./img/background.jpg") center center fixed no-repeat;
+    background: url("./img/background.jpg") center center scroll no-repeat;
     background-size: 100vw 100vh;
   }
   .skills {

@@ -46,7 +46,11 @@ function Header() {
           </a>
         </li>
         <li>
-          <a rel="noreferrer" target={"_blank"} href="https://google.com">
+          <a
+            rel="noreferrer"
+            target={"_blank"}
+            href="https://www.linkedin.com/in/cevdet-ziya-erdogan"
+          >
             <ion-icon name="logo-linkedin"></ion-icon>
           </a>
         </li>

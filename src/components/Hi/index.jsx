@@ -52,13 +52,13 @@ function Hi() {
               working with API's, state managements and responsive design. Also
               I'm experienced about Back-End fundamentals as I develop starter
               projects with NodeJS. Nowadays, I'm focusing on learning vue.js
-              and GraphQL. I really enjoy the phase of writing code and learning
-              new technologies that make this job easier.
+              and GraphQL. I really enjoy the process of writing code and
+              learning new technologies that make this job easier.
             </Text>
             <Text my={"1rem"} textAlign={"left"}>
               Apart from this very intense learning process; I can say that I
-              enjoy doing sports, especially playing football, watching movies
-              and nature walks.
+              enjoy watching movies, reading books, hiking, camping and doing
+              sports, especially playing football.
             </Text>
             <Text textAlign={"left"}>
               You can see my projects and skills in next pages.

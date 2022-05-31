@@ -154,7 +154,9 @@ const projects = [
       "In this app, I simulated a restaurant's menu. This is a pure JavaScript app, doesn't contain any Front-End libraries. It's bootstrapped for responsive design",
     img: [require("../img/kitchen.png"), require("../img/kitchen2.png")],
     usedTechs: ["html", "css", "javascript", "bootstrap"],
-    links: ["https://markdown-previewer-application.netlify.app/"],
+    links: [
+      "https://github.com/czechaj/patika.dev-assignments/tree/main/js/js-assignment-3",
+    ],
   },
 ];
 

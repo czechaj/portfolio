@@ -326,7 +326,17 @@ nav {
 
 // /* queries  */ //
 
-@media only screen and (min-width: 120px) and (max-width: 375px) {
+// @media (hover:none){
+//   .container{
+
+//     .background {
+//       background: url("./img/background.jpg") center center scroll no-repeat;
+//       background-size: 100vw 100vh;
+//     }
+//   }
+// }
+
+@media only screen and (min-width: 120px) and (max-width: 374px) {
   body,
   html {
     min-width: 100vw;
@@ -334,7 +344,7 @@ nav {
   }
   nav {
     .nav-left {
-      width: 30vw;
+      width: 45vw;
       button {
         font-size: 1rem;
         letter-spacing: 0.1rem;
@@ -352,14 +362,14 @@ nav {
         position: absolute;
         display: block;
         font-size: 3rem;
-        top: 7px;
-        left: 99px;
+        top: 3px;
+        left: 96px;
       }
     }
     .dropdown {
       display: flex;
       flex-direction: column;
-      transform: translateY(39%);
+      transform: translateY(39.5%);
       align-items: flex-start;
       background-color: rgba($color: #000000, $alpha: 0.4);
       button:not(:first-child) {
@@ -477,7 +487,7 @@ nav {
   }
 }
 
-@media only screen and(min-width:375px) and (max-width: 600px) {
+@media only screen and(min-width:374px) and (max-width: 600px) {
   body,
   html {
     min-width: 100vw;
@@ -490,9 +500,9 @@ nav {
         font-size: 1rem;
         letter-spacing: 0.1rem;
         color: $secondary;
-
-        cursor: pointer;
         background: transparent;
+        cursor: pointer;
+
         h2 {
           font-size: 2rem;
         }
@@ -512,7 +522,7 @@ nav {
     .dropdown {
       display: flex;
       flex-direction: column;
-      transform: translateY(39%);
+      transform: translateY(40%);
       align-items: flex-start;
       background-color: rgba($color: #000000, $alpha: 0.4);
       button:not(:first-child) {
@@ -587,7 +597,7 @@ nav {
       }
     }
     .background {
-      background: url("./img/background.jpg") center center fixed no-repeat;
+      background: url("./img/background.jpg") center center scroll no-repeat;
       background-size: 100vw 100vh;
     }
   }
