@@ -13,16 +13,16 @@ const projects = [
     usedTechs: ["javascript", "React", "context-API", "react-router", "axios"],
     links: ["https://shopilantee-ecommerce.netlify.app/"],
   },
-  {
-    id: 6,
-    name: "Open Weather App",
-    github: ["https://github.com/czechaj/redux-weather-app"],
-    description:
-      "This is a single page application which you can view the 1 week wather conditions of all cities in Turkey. I used openWeatherAPI for data and Redux for state management. Though it has a simple look, ChakraUI components used for it.",
-    img: [require("../img/weather1.png")],
-    usedTechs: ["javascript", "React", "Redux", "Chakra-UI", "axios"],
-    links: ["https://redux-weather-czechaj.netlify.app/"],
-  },
+  // {
+  //   id: 6,
+  //   name: "Open Weather App",
+  //   github: ["https://github.com/czechaj/redux-weather-app"],
+  //   description:
+  //     "This is a single page application which you can view the 1 week wather conditions of all cities in Turkey. I used openWeatherAPI for data and Redux for state management. Though it has a simple look, ChakraUI components used for it.",
+  //   img: [require("../img/weather1.png")],
+  //   usedTechs: ["javascript", "React", "Redux", "Chakra-UI", "axios"],
+  //   links: ["https://redux-weather-czechaj.netlify.app/"],
+  // },
 
   {
     id: 3,
