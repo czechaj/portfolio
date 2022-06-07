@@ -25,6 +25,20 @@ const projects = [
   // },
 
   {
+    id: 6,
+    name: "The Office Memory Game",
+    github: ["https://github.com/czechaj/react-memory-game"],
+    description:
+      "This is a memory game where The Office characters are expected to be matched and which is designed with pure css. I used Context API for state management.",
+    img: [
+      require("../img/officememory1.png"),
+      require("../img/officememory2.png"),
+      require("../img/officememory3.png"),
+    ],
+    usedTechs: ["javascript", "React", "ContextAPI"],
+    links: ["https://theoffice-memory-game.netlify.app/"],
+  },
+  {
     id: 3,
     name: "BMI Calculator App",
     github: ["https://github.com/czechaj/bmi-calculator-app"],
